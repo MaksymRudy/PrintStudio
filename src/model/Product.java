@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Product {
 
-    private String name;
+    private Type name;
     private Service service;
     private Long id;
     private Map<Company, List<Price>> companyToPrices;
