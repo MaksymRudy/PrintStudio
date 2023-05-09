@@ -7,13 +7,24 @@ public class Main {
 
         //Enter data using BufferReader
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println(menu());
+        String menu = menu();
+        System.out.println(menu);
 
-        // Reading data using readLine
-        String name = reader.readLine();
+        while (true) {
+            // Reading data using readLine
+            String number = reader.readLine();
+            int menuNumber = Integer.parseInt(number);
 
-        // Printing the read line
-        System.out.println(name);
+            // use switch for choosing method
+            switch (menuNumber) {
+                case 1 -> createAnOrder();
+                case 2 -> companyUserCRUD();
+                case 3 -> priceCRUD();
+                case 4 -> productCRUD();
+                default -> System.out.println("wrong number");
+            }
+        }
+
     }
 
     private static String menu() {
@@ -22,5 +33,21 @@ public class Main {
                 "2. Company/User CRUD" + "\n" +
                 "3. Price CRUD" + "\n" +
                 "4. Product CRUD";
+    }
+
+    private static void createAnOrder() {
+        System.out.println("createAnOrder");
+    }
+
+    private static void companyUserCRUD() {
+        System.out.println("companyUserCRUD");
+    }
+
+    private static void priceCRUD() {
+        System.out.println("priceCRUD");
+    }
+
+    private static void productCRUD() {
+        System.out.println("productCRUD");
     }
 }
