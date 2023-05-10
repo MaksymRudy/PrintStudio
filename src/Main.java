@@ -1,3 +1,5 @@
+import service.OrderService;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -36,7 +38,8 @@ public class Main {
     }
 
     private static void createAnOrder() {
-        System.out.println("createAnOrder");
+        OrderService orderService = new OrderService();
+        orderService.handle();
     }
 
     private static void companyUserCRUD() {
