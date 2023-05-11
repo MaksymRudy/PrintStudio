@@ -14,7 +14,7 @@ public class Main {
         int menuNumber = 0;
         while (menuNumber >= 0) {
             // Reading data using readLine
-            System.out.println("Enter number");
+            System.out.println("Enter number:");
             String number = reader.readLine();
             menuNumber = Integer.parseInt(number);
 
@@ -24,7 +24,7 @@ public class Main {
                 case 2 -> companyUserCRUD();
                 case 3 -> priceCRUD();
                 case 4 -> productCRUD();
-                case -1 -> System.out.println("we exit from menu");
+                case -1 -> System.out.println("exit from menu");
                 default -> System.out.println("wrong number");
             }
         }
